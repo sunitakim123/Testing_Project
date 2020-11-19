@@ -11,8 +11,8 @@ public class two {
 	WebDriver driver;
 	@Test(priority=1)
 	public void BrowserLauch()
-	{
-		System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\chromedriver.exe");
+	{	//System.getProperty("user.dir") + "\\src\\main\\java\\Driver\\chromedriver.exe"
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\main\\java\\Driver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
