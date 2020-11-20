@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 public class two {
@@ -12,7 +13,9 @@ public class two {
 	@Test(priority=1)
 	public void BrowserLauch()
 	{	//System.getProperty("user.dir") + "\\src\\main\\java\\Driver\\chromedriver.exe"
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\main\\java\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./src/main/java/Driver/chromedriver");
+		ChromeOptions co = new ChromeOptions();
+		co.setHeadless(true);
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
