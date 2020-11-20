@@ -14,10 +14,10 @@ public class two {
 	public void BrowserLauch()
 	{	//System.getProperty("user.dir") + "\\src\\main\\java\\Driver\\chromedriver.exe"
 		//System.setProperty("webdriver.chrome.driver", "./src/main/java/Driver/chromedriver");
-		String chromeDriverPath = "./src/main/java/Driver/chromedriver" ;
+		String chromeDriverPath = "./src/main/java/Driver/chromedriver.exe" ;
 		System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+		options.addArguments("--window-size=1920,1200","--ignore-certificate-errors");
 	driver= new ChromeDriver(options);
 	//	driver = new ChromeDriver();
 		driver.manage().window().maximize();
