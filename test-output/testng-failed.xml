@@ -5,7 +5,6 @@
     <classes>
       <class name="com.one">
         <methods>
-          <include name="BrowserLauch"/>
           <include name="login"/>
         </methods>
       </class> <!-- com.one -->

@@ -13,10 +13,13 @@ public class two {
 	@Test(priority=1)
 	public void BrowserLauch()
 	{	//System.getProperty("user.dir") + "\\src\\main\\java\\Driver\\chromedriver.exe"
-		System.setProperty("webdriver.chrome.driver", "./src/main/java/Driver/chromedriver");
-		ChromeOptions co = new ChromeOptions();
-		co.setHeadless(true);
-		driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "./src/main/java/Driver/chromedriver");
+		String chromeDriverPath = "./src/main/java/Driver/chromedriver" ;
+		System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+		WebDriver driver = new ChromeDriver(options);
+	//	driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
