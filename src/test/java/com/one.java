@@ -13,7 +13,7 @@ public class one {
 	@Test(priority=1)
 	public void BrowserLauch()
 	{
-		System.setProperty("webdriver.chrome.driver", "./src/main/java/Driver/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/src/main/java/Driver/chromedriver");
 		ChromeOptions co = new ChromeOptions();
 		co.setHeadless(true);
 		driver = new ChromeDriver();
